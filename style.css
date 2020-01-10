@@ -1,0 +1,48 @@
+.artist-button{
+	border: none;
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translateY(-150px);
+	transform: translateX(-100px);
+}
+
+.submit-button{
+	border: hidden;
+    outline: none!important;
+    margin-left: 125px;
+}
+
+.modal{
+	margin-top: 30vh;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.artist-modal-header{
+	padding: 0;
+}
+
+.artist-modal-body{
+	padding: 0;
+	 max-height:500px;
+    overflow:auto;
+}
+
+.tabcontent{
+	height: 250px;
+	padding: 100px;
+}
+
+
+
