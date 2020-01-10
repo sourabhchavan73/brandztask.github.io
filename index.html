@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<button class="artist-button"> 
+	<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addSearchModal">Search Artist</a>
+</button>
+
+
+<!-- POP up for Artist Search -->
+<div class="modal fade" id="addSearchModal">
+	 <div class="modal-dialog modal-md">
+	 	<div class="modal-content">
+	 		<div class="modal-header">
+	 			<div class="modal-body">
+	 				
+	 				<form name="myForm">
+	 					<div class="form-inline mb-4">
+	 						<label for="name" class="mr-5">Name: </label>
+	 						<input id="artist-name"  type="text" class="name form-control ml-4" placeholder="Enter the name" required="Enter Name">
+	 					</div>
+
+	 					<div class="form-inline mb-4">
+	 						<label for="track" class="mr-3">No. Of. Tracks: </label>
+	 						<input id="track-name" type="number" class="tracks form-control" placeholder="Enter Number of tracks" required="Enter Name" min="1" max="4">
+	 					</div>
+
+	 					<button class="submit-button"> 
+							<a href="#" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addSubmitModal">Submit</a>
+						</button>
+	 				</form>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </div> 
+</div>
+
+
+<!-- POP up for Artist Data -->
+<div class="modal fade" id="addSubmitModal"> 
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="artist-modal-header" id="#artist-modal-header">
+				<div class="artist-modal-body" id="#artist-modal-header">
+					<button class="tablink" onclick="openCity('artist-tab-1', this, 'red')" id="defaultOpen">%Artist Name%</button>
+					<button class="tablink" onclick="openCity('artist-tab-2', this, 'green')">%Artist Name%</button>
+					<button class="tablink" onclick="openCity('artist-tab-3', this, 'blue')">%Artist Name%</button>
+					<button class="tablink" onclick="openCity('artist-tab-4', this, 'orange')">%Artist Name%</button>
+
+					<div id="artist-tab-1" class="tabcontent text-center">
+					  <p>Artist: </p>
+					  <p>Track:  </p>
+					</div>
+
+					<div id="artist-tab-2" class="tabcontent text-center">
+					  <p>Artist: </p>
+					  <p>Track:  </p>
+					</div>
+
+					<div id="artist-tab-3" class="tabcontent text-center">
+					  <p>Artist: </p>
+					  <p>Track:  </p>
+					</div>
+
+					<div id="artist-tab-4" class="tabcontent text-center">
+					  <p>Artist: </p>
+					  <p>Track:  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script>
+		function openCity(artistName,elmnt,color) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablink");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].style.backgroundColor = "";
+		  }
+		  document.getElementById(artistName).style.display = "block";
+		  elmnt.style.backgroundColor = color;
+
+		}
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+</html>
